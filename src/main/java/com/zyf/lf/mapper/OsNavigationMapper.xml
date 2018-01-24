@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyf.lf.mapper.OsNavigationMapper">
+	<!--开启二级缓存-->
+
+
+	<resultMap id="BaseResultMap" type="com.zyf.lf.models.entity.OsNavigation">
+		<id column="navigation_id" property="navigationId" />
+		<result column="code" property="code" />
+		<result column="name" property="name" />
+		<result column="status" property="status" />
+		<result column="number" property="number" />
+		<result column="show_number" property="showNumber" />
+		<result column="create_time" property="createTime" />
+		<result column="create_by" property="createBy" />
+		<result column="update_time" property="updateTime" />
+		<result column="update_by" property="updateBy" />
+		<result column="remarks" property="remarks" />
+	</resultMap>
+
+    <!--通用查询结果列-->
+    <sql id="Base_Column_List">
+        navigation_id AS navigationId, code, name, status, number, show_number AS showNumber, create_time AS createTime, create_by AS createBy, update_time AS updateTime, update_by AS updateBy, remarks
+    </sql>
+</mapper>

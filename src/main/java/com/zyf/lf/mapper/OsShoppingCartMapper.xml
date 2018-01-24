@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyf.lf.mapper.OsShoppingCartMapper">
+	<!--开启二级缓存-->
+
+
+	<resultMap id="BaseResultMap" type="com.zyf.lf.models.entity.OsShoppingCart">
+		<id column="cart_id" property="cartId" />
+		<result column="product_spec_number" property="productSpecNumber" />
+		<result column="user_id" property="userId" />
+		<result column="buy_number" property="buyNumber" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+		<result column="check_status" property="checkStatus" />
+	</resultMap>
+
+    <!--通用查询结果列-->
+    <sql id="Base_Column_List">
+        cart_id AS cartId, product_spec_number AS productSpecNumber, user_id AS userId, buy_number AS buyNumber, create_time AS createTime, update_time AS updateTime, check_status AS checkStatus
+    </sql>
+</mapper>

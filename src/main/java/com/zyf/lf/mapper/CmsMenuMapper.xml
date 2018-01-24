@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyf.lf.mapper.CmsMenuMapper">
+	<!--开启二级缓存-->
+
+
+	<resultMap id="BaseResultMap" type="com.zyf.lf.models.entity.CmsMenu">
+		<id column="menu_id" property="menuId" />
+		<result column="parent_id" property="parentId" />
+		<result column="menu_type" property="menuType" />
+		<result column="menu_code" property="menuCode" />
+		<result column="menu_name" property="menuName" />
+		<result column="sort" property="sort" />
+		<result column="href" property="href" />
+		<result column="icon" property="icon" />
+		<result column="status" property="status" />
+		<result column="permission" property="permission" />
+		<result column="create_time" property="createTime" />
+		<result column="create_by" property="createBy" />
+		<result column="update_time" property="updateTime" />
+		<result column="update_by" property="updateBy" />
+		<result column="remarks" property="remarks" />
+	</resultMap>
+
+    <!--通用查询结果列-->
+    <sql id="Base_Column_List">
+        menu_id AS menuId, parent_id AS parentId, menu_type AS menuType, menu_code AS menuCode, menu_name AS menuName, sort, href, icon, status, permission, create_time AS createTime, create_by AS createBy, update_time AS updateTime, update_by AS updateBy, remarks
+    </sql>
+</mapper>
